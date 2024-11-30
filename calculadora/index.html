@@ -10,28 +10,28 @@
     <main id="corpoCalculadora">
 
         <div id="visor">
-        
+        <p id="pvisor"></p>
         </div>
-        <div id="botoes">
-        <input type="button" value="0">
-        <input type="button" value="1">
-        <input type="button" value="2">
-        <input type="button" value="3">
-        <input type="button" value="4">
-        <input type="button" value="5">
-        <input type="button" value="6">
-        <input type="button" value="7">
-        <input type="button" value="8">
-        <input type="button" value="9">
-        <input type="button" value="+">
-        <input type="button" value="-">
-        <input type="button" value="x">
-        <input type="button" value=".">
-        <input type="button" value="%">
-        <input type="button" value="0">
-        <input type="button" value="0">
-        <input type="button" value="0">
-        <input type="button" value="0">
+        <div id="corpoBotoes">
+                <input type="button" class="special" onclick='styles(c)' id="c" value="C">
+                <input type="button" class="strange" onclick='styles(porcent)' id="porcent" value="%">
+                <input type="button" class="strange" onclick='styles(divisao)' id="divisao" value="/">
+                <input type="button" class="strange" onclick='styles(menos)' id="raiz" value="√"> <br>
+                <input type="button" class="normal" id="sete" value="7">
+                <input type="button" class="normal" id="oito" value="8">
+                <input type="button" class="normal" id="nove" value="9">
+                <input type="button" class="strange" onclick='styles(multi)' id="multi" value="x"> <br>
+                <input type="button" class="normal" id="quatro" value="4">
+                <input type="button" class="normal" id="cinco" value="5">
+                <input type="button" class="normal" id="seis" value="6">
+                <input type="button" class="strange" onclick='styles(menos)' id="menos" value="-"> <br>
+                <input type="button" class="normal" id="um" value="1">
+                <input type="button" class="normal" id="dois" value="2">
+                <input type="button" class="normal" id="tres" value="3">
+                <input type="button" class="grande" onclick='styles(mais)' id="mais" value="+"> <br>
+                <input type="button" class="normal" id="zero" value="0">
+                <input type="button" class="special" id="ponto" value=".">
+                <input type="button" class="special" onclick='styles(igual)' id="igual" value="=">
         </div>
         
     </main>

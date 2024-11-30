@@ -6,32 +6,88 @@
 }
 
 body{
-    background-color: lightgrey;
+    background-color: rgba(27, 45, 73, 0.884);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 main{
-    background-color: gray;
+    background-color: rgb(42, 52, 73);
     height: 600px;
-    width: 500px;
+    width: 450px;
     margin: auto;
     position: relative;
     top: 12vh;
     border-radius: 20px;
+    border: 1px solid rgb(5, 16, 54);
+    display: flex;
+    box-shadow: 1px 1px 50px rgba(10, 55, 139, 0.377);
 }
 div#visor{
-    background-color: black;
+    background-color: rgba(20, 75, 224, 0.884);
     border-radius: 20px;
+    border: 3px solid rgb(178, 187, 238);
+    box-shadow: inset 0px 0px 5px black;
+    position: absolute;
     margin: 20px;
-    position: relative;
     height: 100px;
+    width: 350px;
     top: 20px;
+    left: 6%;
+    text-align: right;
+    overflow: hidden;
 }
-div#botoes{
+p#pvisor{
+    font-size: 60px;
+
     position: relative;
-    top: 20px;
-    padding: 30px;
+    top: 15%;
+    right: 10%;
 }
-div#botoes > input {
-    padding: 30px;
+div#corpoBotoes{
+    position: absolute;
+    width: 400px;
+    background-color: rgba(173, 216, 230, 0);
+    height: 400px;
+    top: 160px;
+    left: 2%;
+    padding: 10px 10px 10px 20px;
+}
+div#corpoBotoes > input.normal, .strange, .special {
+    position: relative;
+    left: 4.5%;
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    border: 2px solid rgb(16, 31, 116);
+    margin: 7px;
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(220, 233, 241);
+    transition: border 0.3s ease-in-out;
+    transition: background 0.5s ease;
+}
+input#mais{
+    position: absolute;
+    right: 10%;
+    height: 130px;
+    width: 70px;
+    border-radius: 10px;
+    border: 2px solid rgb(16, 31, 116);
+    margin: 7px;
+    font-size: xx-large;
+    background-color: rgb(220, 233, 241);
+    transition: border 0.3s ease-in-out;
+    transition: background-color 0.5s ease;
+}
+input#mais:hover{
+    border: 3px solid rgb(0, 174, 255);
+    box-shadow: 0px 0px 5px blue;
+    color: rgb(36, 17, 255);
+    cursor: pointer;
+}
+div#corpoBotoes > .normal:hover, .strange:hover, .special:hover{
+    border: 3px solid rgb(0, 174, 255);
+    box-shadow: 0px 0px 5px rgb(1, 1, 158);
+    color: rgb(36, 17, 255);
+    cursor: pointer;
 }
