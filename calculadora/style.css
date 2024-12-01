@@ -6,8 +6,9 @@
 }
 
 body{
-    background-color: rgba(27, 45, 73, 0.884);
+    background: radial-gradient(circle at -4% -12.9%, rgb(55, 76, 119) 0.3%, rgb(30, 33, 48) 90.2%);
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
 
 main{
@@ -20,31 +21,28 @@ main{
     border-radius: 20px;
     border: 1px solid rgb(5, 16, 54);
     display: flex;
-    box-shadow: 1px 1px 50px rgba(10, 55, 139, 0.377);
+    box-shadow: 0px 0px 100px rgba(25, 88, 204, 0.377);
 }
-div#visor{
-    background-color: rgba(20, 75, 224, 0.884);
+#visor{
+    background-color: rgba(58, 69, 100, 0.884);
     border-radius: 20px;
-    border: 3px solid rgb(178, 187, 238);
+    border: 3px solid rgb(110, 129, 236);
     box-shadow: inset 0px 0px 5px black;
     position: absolute;
     margin: 20px;
-    height: 100px;
+    height: 70px;
     width: 350px;
     top: 20px;
     left: 6%;
+    padding: 6% 10px 0px 10px;
+    font-size: 40px;
+    color: rgb(193, 235, 255);
     text-align: right;
     overflow: hidden;
+    transition: border-color 0.3s ease-in-out, transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
 }
-p#pvisor{
-    font-size: 60px;
-
+#corpo{
     position: relative;
-    top: 15%;
-    right: 10%;
-}
-div#corpoBotoes{
-    position: absolute;
     width: 400px;
     background-color: rgba(173, 216, 230, 0);
     height: 400px;
@@ -52,42 +50,58 @@ div#corpoBotoes{
     left: 2%;
     padding: 10px 10px 10px 20px;
 }
-div#corpoBotoes > input.normal, .strange, .special {
+.button{
     position: relative;
     left: 4.5%;
     height: 60px;
     width: 70px;
     border-radius: 10px;
-    border: 2px solid rgb(16, 31, 116);
+    border: 2px solid rgb(71, 92, 211);
     margin: 7px;
     font-size: xx-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(220, 233, 241);
-    transition: border 0.3s ease-in-out;
-    transition: background 0.5s ease;
+    background-color: rgb(62, 73, 94);
+    transition: border 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-input#mais{
+#mais1{
     position: absolute;
     right: 10%;
     height: 130px;
     width: 70px;
     border-radius: 10px;
-    border: 2px solid rgb(16, 31, 116);
+    border: 2px solid rgb(71, 92, 211);
     margin: 7px;
     font-size: xx-large;
-    background-color: rgb(220, 233, 241);
-    transition: border 0.3s ease-in-out;
-    transition: background-color 0.5s ease;
+    background-color: rgb(62, 73, 94);
+    transition: border 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
 }
-input#mais:hover{
-    border: 3px solid rgb(0, 174, 255);
+#mais1:hover{
+    border: 2px solid rgb(0, 174, 255);
     box-shadow: 0px 0px 5px blue;
-    color: rgb(36, 17, 255);
+    color: rgb(204, 220, 255);
     cursor: pointer;
+    transform: scale(1.1);
+    background-color: #1f2f52;
 }
-div#corpoBotoes > .normal:hover, .strange:hover, .special:hover{
-    border: 3px solid rgb(0, 174, 255);
+#mais1:active{
+    background-color: rgb(67, 195, 255);
+    cursor: default;
+    color: rgb(0, 0, 0);
+}
+.button:hover{
+    border: 2px solid rgb(0, 174, 255);
+    background-color: #1f2f52;
     box-shadow: 0px 0px 5px rgb(1, 1, 158);
-    color: rgb(36, 17, 255);
+    color: rgb(204, 220, 255);
     cursor: pointer;
+    transform: scale(1.1);
+}
+.button:active{
+    background-color: rgb(183, 232, 255);
+    color: rgb(0, 0, 0);
+}
+button.estadoAtivo{
+    background-color: rgb(183, 232, 255);
+    cursor: cell;
 }

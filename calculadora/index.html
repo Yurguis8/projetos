@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main id="corpoCalculadora">
-
-        <div id="visor">
-        <p id="pvisor"></p>
+    <main id="calculator">
+            <div id="visor">0</div>
+            <div id="corpo">
+            <div>
+                <button class="button" onclick="clearVisor(), animation(0)">C</button>
+                <button class="button" onclick="calculateRoot(), animation(1)">√</button>
+                <button class="button" onclick="calculatePercent(), animation(2)">%</button>
+                <button class="button" onclick="setOperation('/'), animation(3)">÷</button>
+            </div>
+            <div>
+                <button class="button" onclick="pressNumber(7), animation(4)">7</button>
+                <button class="button" onclick="pressNumber(8), animation(5)">8</button>
+                <button class="button" onclick="pressNumber(9), animation(6)">9</button>
+                <button class="button" onclick="setOperation('*'), animation(7)">×</button>
+            </div>
+            <div>
+                <button class="button" onclick="pressNumber(4), animation(8)">4</button>
+                <button class="button" onclick="pressNumber(5), animation(9)">5</button>
+                <button class="button" onclick="pressNumber(6), animation(10)">6</button>
+                <button class="button" onclick="setOperation('-'), animation(11)">−</button>
+            </div>
+            <div>
+                <button class="button" onclick="pressNumber(1), animation(12)">1</button>
+                <button class="button" onclick="pressNumber(2), animation(13)">2</button>
+                <button class="button" onclick="pressNumber(3), animation(14)">3</button>
+                <button id="mais1" class="special" onclick="setOperation('+'), animation('special')">+</button>
+            </div>
+            <div>
+                <button class="button" onclick="pressDot(), animation(15)">.</button>
+                <button class="button" onclick="pressNumber(0), animation(16)">0</button>
+                <button class="button" onclick="calculate(), animation(17)">=</button>
+                
+            </div>
+            
         </div>
-        <div id="corpoBotoes">
-                <input type="button" class="special" onclick='styles(c)' id="c" value="C">
-                <input type="button" class="strange" onclick='styles(porcent)' id="porcent" value="%">
-                <input type="button" class="strange" onclick='styles(divisao)' id="divisao" value="/">
-                <input type="button" class="strange" onclick='styles(menos)' id="raiz" value="√"> <br>
-                <input type="button" class="normal" id="sete" value="7">
-                <input type="button" class="normal" id="oito" value="8">
-                <input type="button" class="normal" id="nove" value="9">
-                <input type="button" class="strange" onclick='styles(multi)' id="multi" value="x"> <br>
-                <input type="button" class="normal" id="quatro" value="4">
-                <input type="button" class="normal" id="cinco" value="5">
-                <input type="button" class="normal" id="seis" value="6">
-                <input type="button" class="strange" onclick='styles(menos)' id="menos" value="-"> <br>
-                <input type="button" class="normal" id="um" value="1">
-                <input type="button" class="normal" id="dois" value="2">
-                <input type="button" class="normal" id="tres" value="3">
-                <input type="button" class="grande" onclick='styles(mais)' id="mais" value="+"> <br>
-                <input type="button" class="normal" id="zero" value="0">
-                <input type="button" class="special" id="ponto" value=".">
-                <input type="button" class="special" onclick='styles(igual)' id="igual" value="=">
-        </div>
-        
     </main>
+    <script src="calculator.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
